@@ -1,4 +1,4 @@
-// An implementation of a Training Record as an ArrayList updated at 12.22pm
+// An implementation of a Training Record as an ArrayList updated by shermina at 12.22pm
 package com.stir.cscu9t4practical1;
 
 

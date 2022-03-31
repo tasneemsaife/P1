@@ -1,4 +1,4 @@
-// GUI and main program for the Training Record updated on 12.24
+// GUI and main program for the Training Record updated by shermina on 12.24
 package com.stir.cscu9t4practical1;
 
 import java.awt.*;

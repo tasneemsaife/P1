@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor updated on 31-March.
+ * and open the template in the editor updated by shermina on 31-March.
  */
 package com.stir.cscu9t4practical1;
 
