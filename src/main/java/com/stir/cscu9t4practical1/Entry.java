@@ -1,4 +1,4 @@
-// This class holds information about a single training session updated on 31-March
+// This class holds information about a single training session updated at 12.22pm
 package com.stir.cscu9t4practical1;
 
 import java.util.Calendar;
