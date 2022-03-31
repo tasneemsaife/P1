@@ -1,4 +1,4 @@
-// An implementation of a Training Record as an ArrayList
+// An implementation of a Training Record as an ArrayList updated on 31-March
 package com.stir.cscu9t4practical1;
 
 
@@ -31,7 +31,8 @@ public class TrainingRecord {
        return result;
    } // lookupEntry
    
-   // Count the number of entries
+   
+  
    public int getNumberOfEntries(){
        return tr.size();
    }

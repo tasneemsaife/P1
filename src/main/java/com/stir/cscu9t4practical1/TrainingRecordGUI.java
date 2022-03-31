@@ -1,4 +1,4 @@
-// GUI and main program for the Training Record
+// GUI and main program for the Training Record updated on 31-March
 package com.stir.cscu9t4practical1;
 
 import java.awt.*;
@@ -108,6 +108,7 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         return message;
     }
     
+       
     public String lookupEntry() {
         int m = Integer.parseInt(month.getText());
         int d = Integer.parseInt(day.getText());
