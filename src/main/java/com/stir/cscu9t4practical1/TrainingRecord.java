@@ -37,18 +37,20 @@ public class TrainingRecord {
        while (iter.hasNext()) {
           Entry current = iter.next();
           if (current.getDay()==d && current.getMonth()==m && current.getYear()==y) 
-             result = current.getEntry();
+             result = result + current.getEntry();
             }
        return result;
 	   
    }
-   public String remove (int d, int m, int y) {
+   public String remove (String na, int d, int m, int y) {
 	   ListIterator<Entry> iter = tr.listIterator();
        String result = "No entries found";
        while (iter.hasNext()) {
           Entry current = iter.next();
-          if (current.getDay()==d && current.getMonth()==m && current.getYear()==y && n.equals(current.getName())) 
-              result = current.getEntry();
+          if (na.equals(current.getName())&& current.getDay()==d && current.getMonth()==m && current.getYear()==y && n.equals(current.getName())) 
+          {   tr.remove(current);
+           result = "Entry removed";
+          }
              }
         return result;
 	   
