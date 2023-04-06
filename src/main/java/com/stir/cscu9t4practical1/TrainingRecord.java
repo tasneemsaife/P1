@@ -29,6 +29,7 @@ public class TrainingRecord {
           if (current.getDay()==d && current.getMonth()==m && current.getYear()==y) 
              result = current.getEntry();
             }
+       
        return result;
    } // lookupEntry
    public String FindAllEntry (int d, int m, int y) {

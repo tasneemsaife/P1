@@ -17,9 +17,19 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
     private JTextField mins = new JTextField(2);
     private JTextField secs = new JTextField(2);
     private JTextField dist = new JTextField(4);
+    private JTextField terrain = new JTextField(2);
+	private JTextField tempo = new JTextField(2);
+	private JTextField repetitions = new JTextField(2);
+	private JTextField recovery = new JTextField(2);
+	private JTextField where = new JTextField(2);
     private JLabel labn = new JLabel(" Name:");
     private JLabel labd = new JLabel(" Day:");
     private JLabel labm = new JLabel(" Month:");
+    private JLabel labt = new JLabel(" Terrain:");
+    private JLabel labte = new JLabel(" Tempo:");
+    private JLabel labp = new JLabel(" Pool/outdoor:");
+    private JLabel labge = new JLabel(" Recovery:");
+    private JLabel labnum = new JLabel(" repetitions:"); 
     private JLabel laby = new JLabel(" Year:");
     private JLabel labh = new JLabel(" Hours:");
     private JLabel labmm = new JLabel(" Mins:");
@@ -65,6 +75,22 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         add(labdist);
         add(dist);
         dist.setEditable(true);
+        add(labt);
+        add(terrain);
+        terrain.setEditable(true);
+        add(labte);
+        add(addR);
+        tempo.setEditable(true);
+        add(labge);
+        add(recovery);
+        recovery.setEditable(true);
+        add(labnum);
+        add(repetitions);
+        repetitions.setEditable(true);
+        add(labp);
+        add(where);
+        where.setEditable(true);
+        add(labte);
         add(addR);
         addR.addActionListener(this);
         add(lookUpByDate);
@@ -106,6 +132,7 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
     public String addEntry(String what) {
         String message = "Record added\n";
         System.out.println("Adding "+what+" entry to the records");
+         Entry e;
         String n = name.getText();
         int m = Integer.parseInt(month.getText());
         int d = Integer.parseInt(day.getText());
@@ -114,12 +141,6 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         int h = Integer.parseInt(hours.getText());
         int mm = Integer.parseInt(mins.getText());
         int s = Integer.parseInt(secs.getText());
-        
-        
-        
-        
-        Entry e = new Entry(n, d, m, y, h, mm, s, km);
-        myAthletes.addEntry(e);
         return message;
     }
     
@@ -149,6 +170,7 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         String message = myAthletes.remove(n, d, m, y);
        // return message;
     }
+    
 
     public void blankDisplay() {
         name.setText("");

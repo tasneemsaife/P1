@@ -1,5 +1,7 @@
 package com.stir.cscu9t4practical1;
 
+import java.util.Calendar;
+
 public class CycleEntry extends Entry{
 	 private String terrain;
 	 private String tempo;
@@ -9,6 +11,11 @@ public class CycleEntry extends Entry{
     super(n, d, m, y, h, min, s, dist);
     this.terrain = ter;
     this.tempo=tem;
+    name = n;
+	  Calendar inst = Calendar.getInstance();
+	  inst.set(y,m-1,d,h,min,s);
+	  dateAndTime = inst;
+  distance = dist;
 	}
 	 
 	public String getterrain( ) {
