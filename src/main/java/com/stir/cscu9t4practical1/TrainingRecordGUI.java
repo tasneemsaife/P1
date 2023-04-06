@@ -141,10 +141,27 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         int h = Integer.parseInt(hours.getText());
         int mm = Integer.parseInt(mins.getText());
         int s = Integer.parseInt(secs.getText());
-        return message;
+        
+        String ter = terrain.getText();
+         String tem = tempo.getText();
+         try {
+        	 int rec = Integer.parseInt(recovery.getText());
+        	 int rep = Integer.parseInt(repetitions.getText());
+        	 String wh=where.getText();
+        	 
+        if(!wh.isEmpty())
+        	e= new SwimEntry(n, d, m, y, h, mm, s, km, wh);
+        else if (!tem.isEmpty() && !ter.isEmpty())
+        	e=new CycleEntry(n, d, m, y, h, mm, s, km, ter, tem);
+        else if (!recovery.getText().isEmpty() && !repetitions.getText().isEmpty())
+        	e=new SprintEntry(n, d, m, y, h, mm, s, km, rec, rep);
+        else
+        	e=new Entry(n, d, m, y, h, mm, s, km);
+        myAthletes.addEntry(e);
+         }catch (NumberFormatException a1){}
+         return message;
     }
-    
-       
+   
     public String lookupEntry() {
         int m = Integer.parseInt(month.getText());
         int d = Integer.parseInt(day.getText());
