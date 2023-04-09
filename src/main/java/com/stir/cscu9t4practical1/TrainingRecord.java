@@ -32,7 +32,7 @@ public class TrainingRecord {
        
        return result;
    } // lookupEntry
-   public String FindAllEntry (int d, int m, int y) {
+   public String findAllList (int d, int m, int y) {
 	   ListIterator<Entry> iter = tr.listIterator();
        String result = "No entries found";
        while (iter.hasNext()) {
@@ -43,7 +43,7 @@ public class TrainingRecord {
        return result;
 	   
    }
-   public String remove (String na, int d, int m, int y) {
+   public String removeList (String na, int d, int m, int y) {
 	   ListIterator<Entry> iter = tr.listIterator();
        String result = "No entries found";
        while (iter.hasNext()) {
